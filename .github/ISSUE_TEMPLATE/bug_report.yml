@@ -1,0 +1,66 @@
+name: Bug report
+description: Report a problem with Arabesque
+labels: ["bug"]
+body:
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version
+      description: For example, 15.1. You can find it under Apple menu › About This Mac.
+    validations:
+      required: true
+  - type: dropdown
+    id: mac
+    attributes:
+      label: Mac
+      options:
+        - Apple silicon
+        - Intel
+    validations:
+      required: true
+  - type: dropdown
+    id: keyboard
+    attributes:
+      label: Keyboard
+      description: The physical keyboard you type on.
+      options:
+        - US ANSI
+        - ISO
+        - JIS
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: app
+    attributes:
+      label: App
+      description: The app where the problem happens, for example TextEdit, Safari or Terminal.
+    validations:
+      required: true
+  - type: textarea
+    id: keys
+    attributes:
+      label: Keys pressed
+      description: "Write the keys as in the README: ⌥(e s) means hold ⌥, press e, press s, let go of ⌥."
+      placeholder: "⌥(e s)"
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+      description: What you expected to type.
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result
+      description: What you got instead.
+    validations:
+      required: true
+  - type: input
+    id: input-sources
+    attributes:
+      label: Other input sources enabled
+      description: "Optional. The other input sources you have in System Settings › Keyboard › Text Input › Input Sources."

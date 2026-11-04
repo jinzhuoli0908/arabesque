@@ -1,0 +1,29 @@
+name: Language request
+description: Ask for another language or keyboard
+labels: ["enhancement"]
+body:
+  - type: dropdown
+    id: keyboard
+    attributes:
+      label: Which physical keyboard do you use?
+      options:
+        - US ANSI
+        - ISO
+        - JIS
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: languages
+    attributes:
+      label: Which languages do you want to type?
+      description: One language or a combination.
+    validations:
+      required: true
+  - type: textarea
+    id: current-method
+    attributes:
+      label: How do you type these letters today?
+      description: For example, press and hold, a different keyboard layout, or copy and paste.
+    validations:
+      required: true
